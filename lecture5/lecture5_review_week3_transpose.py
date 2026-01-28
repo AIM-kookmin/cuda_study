@@ -21,6 +21,8 @@ from torch.utils.cpp_extension import load_inline
 # Compiler 설정 (PyTorch 호환성)
 os.environ["CC"] = "gcc"
 os.environ["CXX"] = "g++"
+# CUDA 12.0은 compute capability 9.0까지만 지원
+os.environ["TORCH_CUDA_ARCH_LIST"] = "8.9;9.0"
 
 # 상수 정의
 TILE_SIZE = 32  # Transpose에서 일반적으로 사용하는 타일 크기

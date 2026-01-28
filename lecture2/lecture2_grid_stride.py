@@ -15,8 +15,8 @@ import torch
 from torch.utils.cpp_extension import load_inline
 
 # 컴파일러 설정
-os.environ["CC"] = "gcc-10"
-os.environ["CXX"] = "g++-10"
+os.environ["CC"] = "gcc"
+os.environ["CXX"] = "g++"
 
 
 def cdiv(n: int, divisor: int) -> int:
@@ -73,7 +73,7 @@ __global__ void vector_add_grid_stride(
     // stride만큼 건너뛰면서 끝까지 처리
     // 예: 스레드 0은 index 0, stride, 2*stride, ... 를 처리
     for (int i = index; i < n; i += stride) {
-        c[i] = a[i] + b[i];
+            
     }
 }
 

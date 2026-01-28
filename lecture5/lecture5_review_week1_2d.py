@@ -20,6 +20,8 @@ from torch.utils.cpp_extension import load_inline
 
 os.environ["CC"] = "gcc"
 os.environ["CXX"] = "g++"
+# CUDA 12.0은 compute capability 9.0까지만 지원
+os.environ["TORCH_CUDA_ARCH_LIST"] = "8.9;9.0"
 
 
 def cdiv(n: int, divisor: int) -> int:

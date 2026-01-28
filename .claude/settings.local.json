@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wsl -d Ubuntu bash -c:*)",
+      "Bash(wsl -d Ubuntu bash -lc \"source ~/cuda_env/bin/activate && export PATH=/usr/local/cuda-13.1/bin:$PATH && rm -rf ~/.cache/torch_extensions/py312_cu128/test_ext2 && python /mnt/d/develop/cuda_study/lecture6/lecture6_reduction_naive.py\")"
+    ]
+  }
+}

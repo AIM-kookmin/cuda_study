@@ -21,8 +21,8 @@ void hello(int blocks, int threads) {
 # 컴파일러에게 "hello라는 함수가 있어"라고 미리 알려줍니다.
 cpp_header = "void hello(int blocks, int threads);"
 
-os.environ["CC"]= "gcc-10"
-os.environ["CXX"]= "g++-10"
+os.environ["CC"] = "gcc"
+os.environ["CXX"] = "g++"
 
 # JIT 컴파일
 my_module = load_inline(

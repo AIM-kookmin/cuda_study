@@ -22,6 +22,7 @@ from torch.utils.cpp_extension import load_inline
 # 컴파일러 설정
 os.environ["CC"] = "gcc"
 os.environ["CXX"] = "g++"
+# TORCH_CUDA_ARCH_LIST 제거 - GPU 아키텍처 자동 감지 사용
 
 
 def cdiv(n: int, divisor: int) -> int:

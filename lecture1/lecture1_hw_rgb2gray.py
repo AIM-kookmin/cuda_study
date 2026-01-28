@@ -14,8 +14,8 @@ import torch
 from torch.utils.cpp_extension import load_inline
 
 # 컴파일러 설정
-os.environ["CC"] = "gcc-10"
-os.environ["CXX"] = "g++-10"
+os.environ["CC"] = "gcc"
+os.environ["CXX"] = "g++"
 
 
 def cdiv(n: int, divisor: int) -> int:
